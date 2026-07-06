@@ -1,6 +1,7 @@
 package variables;
 
 public class VariableExample {
+	
 	public static void main(String[] args) {
 		System.out.print(3 + 5);
 		System.out.print(8 + 7);
@@ -14,4 +15,5 @@ public class VariableExample {
 		int result = num1 + num2;
 		System.out.println(result);
 	}
+	
 }

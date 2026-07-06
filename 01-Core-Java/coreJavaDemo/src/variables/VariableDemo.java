@@ -1,6 +1,7 @@
 package variables;
 
 public class VariableDemo {
+	
 	public static void main(String[] args) {
 		// Declaring and initializing variables
         
@@ -26,4 +27,5 @@ public class VariableDemo {
         System.out.println("Simple Interest: " + si);  
         System.out.println("Character: " + var);
 	}
+	
 }
