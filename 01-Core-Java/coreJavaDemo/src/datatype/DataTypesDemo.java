@@ -57,7 +57,7 @@ public class DataTypesDemo {
         System.out.println("Symbol: " + symbol);
         
         /* 
-		 * Non-Primitive(Reference) Data Types 
+		 * Non-Primitive(Reference) Data Types   
 		 */
         
         // String
