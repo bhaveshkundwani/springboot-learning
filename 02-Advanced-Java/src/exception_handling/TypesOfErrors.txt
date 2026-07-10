@@ -1,0 +1,4 @@
+Types of error:-
+1. Compile - time error
+2. Runtime error -> Exception handling
+3. Logical error
