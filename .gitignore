@@ -27,8 +27,6 @@ replay_pid*
 # Eclipse / Spring Tool Suite
 **/bin/
 .settings/
-.classpath
-.project
 
 # VS Code (optional)
 .vscode/
