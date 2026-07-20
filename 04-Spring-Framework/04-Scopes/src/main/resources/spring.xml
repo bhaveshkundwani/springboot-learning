@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- <bean id="alien1" class="com.spring.Alien"></bean> -->
+    
+    <!-- by default scope is singleton  -->
+    <!-- singleton object is created as soon as the container is loaded -->
+    <bean id="alien1" class="com.spring.Alien" scope="prototype"></bean>
+	
+	<!-- <bean id="alien2" class="com.spring.Alien"></bean> -->
+	
+	<bean id="lap" class="com.spring.Laptop"></bean>
+
+</beans>
