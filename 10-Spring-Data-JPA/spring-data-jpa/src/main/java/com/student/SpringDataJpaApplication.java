@@ -30,20 +30,30 @@ public class SpringDataJpaApplication {
 //		s2.setName("Kiran");
 //		s2.setMarks(80);
 //
-//		s3.setRollNo(103);
-//		s3.setName("Bhavesh");
-//		s3.setMarks(81);
+		s3.setRollNo(103);
+		s3.setName("Bhavesh");
+		s3.setMarks(90);
 //		
 //		repo.save(s1);
 //		repo.save(s2);
 //		repo.save(s3);
 		
-		System.out.println(repo.findAll());
-		
-		Optional<Student> s = repo.findById(105);
-		System.out.println(s.orElse(new Student()));
-		System.out.println(repo.findById(101));
+//		System.out.println(repo.findAll());
+//		
+//		Optional<Student> s = repo.findById(105);
+//		System.out.println(s.orElse(new Student()));
+//		System.out.println(repo.findById(101));
 		 
+//		System.out.println(repo.findByName("Navin"));
+//		System.out.println(repo.findByMarks(75));
+//		
+//		System.out.println(repo.findByMarksGreaterThan(72));
+		
+		// update
+		repo.save(s3);
+
+		// delete
+		repo.delete(s3);
 	}
 
 }
