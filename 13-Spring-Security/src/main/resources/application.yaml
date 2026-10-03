@@ -5,4 +5,4 @@ spring:
   security:
     user:
       name: bhavesh
-      password: bhavesh18
+      password: 1234
