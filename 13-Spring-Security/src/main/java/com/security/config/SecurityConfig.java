@@ -9,6 +9,10 @@ import org.springframework.security.config.annotation.web.configurers.AuthorizeH
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
 import org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -57,16 +61,26 @@ public class SecurityConfig {
 //			}
 //		};
 //		httpSecurity.sessionManagement(custSession);
-		
+
 		/*
-		 * with lambda	
+		 * with lambda
 		 */
-		 httpSecurity
-		 	.csrf(customizer -> customizer.disable())
-		 	.authorizeHttpRequests(request -> request.anyRequest().authenticated())
-		 	.httpBasic(Customizer.withDefaults())
-		 	.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+		httpSecurity.csrf(customizer -> customizer.disable())
+				.authorizeHttpRequests(request -> request.anyRequest().authenticated())
+				.httpBasic(Customizer.withDefaults())
+				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
 		return httpSecurity.build();
+	}
+
+	@Bean
+	public UserDetailsService userDetailsService() {
+		UserDetails user = User.withDefaultPasswordEncoder().username("bhavesh").password("b@123").roles("USER")
+				.build();
+
+		UserDetails admin = User.withDefaultPasswordEncoder().username("admin").password("admin@123").roles("ADMIN")
+				.build();
+
+		return new InMemoryUserDetailsManager(user, admin);
 	}
 }

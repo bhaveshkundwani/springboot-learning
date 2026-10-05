@@ -2,7 +2,24 @@ spring:
   application:
     name: security-demo
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: bhavesh18
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
   security:
     user:
       name: bhavesh
       password: 1234
+
+server:
+  port: 8080
