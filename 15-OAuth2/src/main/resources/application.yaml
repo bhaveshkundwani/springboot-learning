@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: oauth2-demo
@@ -7,9 +8,9 @@ spring:
       client:
         registration:
           github:
-            client-id: YOUR_GITHUB_CLIENT_ID
-            client-secret: YOUR_GITHUB_CLIENT_SECRET
+            client-id: ${GITHUB_CLIENT_ID}
+            client-secret: ${GITHUB_CLIENT_SECRET}
 
           google:
-            client-id: YOUR_GOOGLE_CLIENT_ID
-            client-secret: YOUR_GOOGLE_CLIENT_SECRET
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
